@@ -17,60 +17,6 @@
  * under the License.
  */
 
-function Everything() {
-
-	// No page transition effects
-	$.mobile.defaultPageTransition = 'none';
-
-	// Function:  Turn off audio
-	var turnOffAudio = function(){
-		var audioElements = document.getElementsByTagName('audio');
-		if(audioElements.length >= 1){
-			for(i=0; i<audioElements.length; i++){
-				audioElements[i].pause();
-			}			
-		}	
-	};
-
-	var callRemote = function(event, db, jsonpurl){
-		if(event) var event = JSON.stringify(event) || {};
-		if(db) var db = JSON.stringify(db) || {};
-		if(jsonpurl) var jsonpurl = jsonpurl || "http://www.usd21.org/m/fp/remote/?";
-		if(navigator.onLine){
-			$.ajax({
-				url: jsonpurl,
-				jsonp: "callback",
-				dataType: "jsonp",
-				data: {
-					"event": event,
-					"db": db,
-					"jsonpurl": jsonpurl
-				},
-				success: function(response) {
-				},
-				error: function(err){
-					alert(err);
-				}
-			});
-		}
-	};
-
-	$(document).on('pagecreate', function(event) {
-
-		turnOffAudio();
-		var db = new PouchDB('firstPrinciples.db', {
-			adapter: 'cordova-sqlite',
-			iosDatabaseLocation: 'Library',
-			androidDatabaseImplementation: 2
-		});
-		var dbInfo = db.info();
-		callRemote(event, dbInfo);
-		alert("pageinit event has fired");
-
-	});
-
-}
-
 var app = {
 
 	initialize: function() {
@@ -78,6 +24,22 @@ var app = {
 	},
 
 	onDeviceReady: function() {
+
+		var turnOffAudio = function(){
+			var audioElements = document.getElementsByTagName('audio');
+			if(audioElements.length >= 1){
+				for(i=0; i<audioElements.length; i++){
+					audioElements[i].pause();
+				}			
+			}	
+		};
+
+		$(document).on('pagecreate', function(event) {
+			turnOffAudio();
+		});
+
+		$.mobile.defaultPageTransition = 'none';
+
 		window.plugin.statusbarOverlay.isVisible( function (isVisible) {
 			window.plugin.statusbarOverlay.hide();
 		});
@@ -99,7 +61,35 @@ var app = {
 			}
 		});
 
-		Everything();
+		var db = new PouchDB('firstPrinciples.db', {
+			iosDatabaseLocation: 'Library',
+			androidDatabaseImplementation: 2
+		});
+		var dbInfo = db.info();
+
+		var callRemote = function(event, db, jsonpurl){
+			if(event) var event = JSON.stringify(event) || {};
+			if(db) var db = JSON.stringify(db) || {};
+			if(jsonpurl) var jsonpurl = jsonpurl || "http://www.usd21.org/m/fp/remote/?";
+			if(navigator.onLine){
+				$.ajax({
+					url: jsonpurl,
+					jsonp: "callback",
+					dataType: "jsonp",
+					data: {
+						"event": event,
+						"db": db,
+						"jsonpurl": jsonpurl
+					},
+					success: function(response) {
+					},
+					error: function(err){
+					}
+				});
+			}
+		};
+		callRemote();
+
 	}
 
 };
