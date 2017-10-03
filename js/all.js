@@ -52,7 +52,7 @@ var app = {
 					return alert("You must be connected to the internet in order to access this link.");
 				}
 				if( url.indexOf("usd21.org/m/niv84")>=0 ) {
-					var target = "_self";
+					var target = "_blank";
 					var ref = cordova.InAppBrowser.open(url, target, 'location=yes,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
 				} else {
 					var target = "_system";
