@@ -35,7 +35,7 @@ var app = {
 		};
 
 		$(document).on('pagecreate', function(event) {
-			turnOffAudio();
+			// turnOffAudio();
 		});
 
 		$.mobile.defaultPageTransition = 'none';

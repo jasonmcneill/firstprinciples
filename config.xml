@@ -9,8 +9,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
+    <allow-intent href="http*://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
@@ -38,7 +37,6 @@
     </platform>
     <platform name="android">
         <allow-intent href="market:*" />
-        <allow-intent href="http*://www.usd21.org/m/*" />
         <preference name="android-installLocation" value="auto" />
         <icon src="images/icons/rob20130621/36x36.png" width="36" height="36" density="ldpi" />
         <icon src="images/icons/rob20130621/48x48.png" width="48" height="48" density="mdpi" />
