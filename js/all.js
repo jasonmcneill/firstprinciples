@@ -46,22 +46,18 @@ var app = {
 		
 		$("a").on("click", function(evt){
 			var url = evt.currentTarget.href;
-			if( (url.indexOf("http://")>=0) || (url.indexOf("https://")>=0) ) {
+			var first4Characters = url.substr(0,4);
+			if(first4Characters == "http") {
 				evt.preventDefault();
 				if (! navigator.onLine) {
 					return alert("You must be connected to the internet in order to access this link.");
 				}
-				var target = "_system";
-				var ref = cordova.InAppBrowser.open(url, target, 'location=yes,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
-				/*
-				if( url.indexOf("usd21.org/m/niv84")>=0 ) {
-					var target = "_blank";
-					var ref = cordova.InAppBrowser.open(url, target, 'location=yes,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
-				} else {
+				if( url.indexOf("usd21.org/m") <= -1 ) {
 					var target = "_system";
-					var ref = cordova.InAppBrowser.open(url, target, 'location=yes,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
+				} else {
+					var target = "_blank";
 				}
-				*/
+				return cordova.InAppBrowser.open(url, target, 'location=yes,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
 			}
 		});
 
