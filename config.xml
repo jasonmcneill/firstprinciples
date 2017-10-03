@@ -26,4 +26,8 @@
     </platform>
     <preference name="fullscreen" value="true" />
     <icon src="icon.png" />
+    <!-- <plugin spec="https://github.com/litehelpers/Cordova-sqlite-storage.git#v2.0.4" /> -->
+    <!-- <plugin spec="https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay" /> -->
+    <!-- <plugin spec="https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay" /> -->
+    <!-- <plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" /> -->
 </widget>
