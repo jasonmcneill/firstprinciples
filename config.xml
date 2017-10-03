@@ -46,6 +46,7 @@
         <icon src="images/icons/rob20130621/72x72.png" width="72" height="72" density="hdpi" />
         <icon src="images/icons/rob20130621/96x96.png" width="96" height="96" density="xhdpi" />
     </platform>
+    <platform name="winphone" /> 
     <engine name="android" spec="^6.2.3" />
     <engine name="browser" spec="^4.1.0" />
     <plugin name="cordova-plugin-inappbrowser" spec="^1.7.1" />
