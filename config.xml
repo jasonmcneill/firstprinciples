@@ -45,13 +45,11 @@
     </platform>
     <platform name="android">
         <preference name="android-installLocation" value="auto" />
-        <icon src="images/icons/rob20130621/36x36.png" width="36" height="36" qualifier="ldpi" />
-        <icon src="images/icons/rob20130621/48x48.png" width="48" height="48" qualifier="mdpi" />
-        <icon src="images/icons/rob20130621/72x72.png" width="72" height="72" qualifier="hdpi" />
-        <icon src="images/icons/rob20130621/96x96.png" width="96" height="96" qualifier="xhdpi" />
+        <icon src="images/icons/rob20130621/36x36.png" width="36" height="36" />
+        <icon src="images/icons/rob20130621/48x48.png" width="48" height="48" />
+        <icon src="images/icons/rob20130621/72x72.png" width="72" height="72" />
+        <icon src="images/icons/rob20130621/96x96.png" width="96" height="96" />
     </platform>
-    <engine name="android" spec="^6.2.3" />
-    <engine name="browser" spec="^4.1.0" />
     <plugin name="cordova-plugin-inappbrowser" spec="^1.7.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
     <!-- <plugin spec="https://github.com/litehelpers/Cordova-sqlite-storage.git#v2.0.4" /> -->
