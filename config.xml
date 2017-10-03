@@ -26,25 +26,25 @@
         <config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" mode="replace">
             <false/>
         </config-file>
-        <icon src="images/icons/rob20130621/57x57.png" platform="ios" width="57" height="57" />
-        <icon src="images/icons/rob20130621/72x72.png" platform="ios" width="72" height="72" />
-        <icon src="images/icons/rob20130621/114x114.png" platform="ios" width="114" height="114" />
-        <icon src="images/icons/rob20130621/144x144.png" platform="ios" width="144" height="144" />
-        <splash src="images/rob20130621/splash/320x480.png" platform="ios" width="320" height="480" />
-        <splash src="images/rob20130621/splash/640x960.png" platform="ios" width="640" height="960" />
-        <splash src="images/rob20130621/splash/640x1136.png" platform="ios" width="640" height="1136" />
-        <splash src="images/rob20130621/splash/1024x768.png" platform="ios" width="1024" height="768" />
-        <splash src="images/rob20130621/splash/768x1024.png" platform="ios" width="768" height="1024" />
-        <splash src="images/rob20130621/splash/2048x1496.png" platform="ios" width="2048" height="1496" />
-        <splash src="images/rob20130621/splash/1536x2008.png" platform="ios" width="1536" height="2008" />
+        <icon src="images/icons/rob20130621/57x57.png" width="57" height="57" />
+        <icon src="images/icons/rob20130621/72x72.png" width="72" height="72" />
+        <icon src="images/icons/rob20130621/114x114.png" width="114" height="114" />
+        <icon src="images/icons/rob20130621/144x144.png" width="144" height="144" />
+        <splash src="images/rob20130621/splash/320x480.png" width="320" height="480" />
+        <splash src="images/rob20130621/splash/640x960.png" width="640" height="960" />
+        <splash src="images/rob20130621/splash/640x1136.png" width="640" height="1136" />
+        <splash src="images/rob20130621/splash/1024x768.png" width="1024" height="768" />
+        <splash src="images/rob20130621/splash/768x1024.png" width="768" height="1024" />
+        <splash src="images/rob20130621/splash/2048x1496.png" width="2048" height="1496" />
+        <splash src="images/rob20130621/splash/1536x2008.png" width="1536" height="2008" />
     </platform>
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="android-installLocation" value="auto" />
-        <icon src="images/icons/rob20130621/36x36.png" platform="android" width="36" height="36" qualifier="ldpi" />
-        <icon src="images/icons/rob20130621/48x48.png" platform="android" width="48" height="48" qualifier="mdpi" />
-        <icon src="images/icons/rob20130621/72x72.png" platform="android" width="72" height="72" qualifier="hdpi" />
-        <icon src="images/icons/rob20130621/96x96.png" platform="android" width="96" height="96" qualifier="xhdpi" />
+        <icon src="images/icons/rob20130621/36x36.png" width="36" height="36" qualifier="ldpi" />
+        <icon src="images/icons/rob20130621/48x48.png" width="48" height="48" qualifier="mdpi" />
+        <icon src="images/icons/rob20130621/72x72.png" width="72" height="72" qualifier="hdpi" />
+        <icon src="images/icons/rob20130621/96x96.png" width="96" height="96" qualifier="xhdpi" />
     </platform>
     <engine name="android" spec="^6.2.3" />
     <engine name="browser" spec="^4.1.0" />
