@@ -33,16 +33,17 @@ var app = {
 				}			
 			}	
 		};
-
-		$(document).on('pagecreate', function(event) {
-			// turnOffAudio();
+		$("div[data-role='page']").on( "pageshow", function( event, ui ) {
+			turnOffAudio();
 		});
 
 		$.mobile.defaultPageTransition = 'none';
 
-		window.plugin.statusbarOverlay.isVisible( function (isVisible) {
-			window.plugin.statusbarOverlay.hide();
-		});
+		if((typeof window.plugin !== "undefined") && (typeof window.plugin.statusbarOverlay !== "undefined")){
+			window.plugin.statusbarOverlay.isVisible( function (isVisible) {
+				window.plugin.statusbarOverlay.hide();
+			});			
+		}
 		
 		$("a[rel='external']").on("click", function(evt){
 			var url = evt.currentTarget.href;
