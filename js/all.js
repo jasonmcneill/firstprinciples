@@ -44,10 +44,17 @@ var app = {
 			window.plugin.statusbarOverlay.hide();
 		});
 		
-		$("a").on("click", function(evt){
+		$("a[rel='external']").on("click", function(evt){
 			var url = evt.currentTarget.href;
+
+			/*
 			var first4Characters = url.substr(0,4);
-			if(first4Characters == "http") {
+			var isNotAudio = true;
+			if( (url.indexOf(".mp3")<=-1) || (url.indexOf(".ogg")<=-1) || (url.indexOf(".m4a")<=-1) ){
+				isNotAudio = false;
+			}
+			if((first4Characters == "http") && (isNotAudio)){
+			*/
 				evt.preventDefault();
 				if (! navigator.onLine) {
 					return alert("You must be connected to the internet in order to access this link.");
@@ -58,7 +65,10 @@ var app = {
 					var target = "_blank";
 				}
 				return cordova.InAppBrowser.open(url, target, 'location=yes,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
+
+			/*
 			}
+			*/
 		});
 
 		var db = new PouchDB('firstPrinciples.db', {
