@@ -51,9 +51,9 @@ var app = {
 				return alert("You must be connected to the internet in order to access this link.");
 			}
 			if( url.indexOf("usd21.org/m") <= -1 ) {
-				window.open(evt.currentTarget.href, '_system');
+				cordova.InAppBrowser.open(evt.currentTarget.href, '_system', 'location=yes');
 			} else {
-				window.open(evt.currentTarget.href, '_blank', 'location=yes,toolbar=yes');
+				cordova.InAppBrowser.open(evt.currentTarget.href, '_self', 'location=yes,toolbar=yes');
 			}
 		});
 
