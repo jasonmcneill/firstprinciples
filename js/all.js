@@ -63,7 +63,7 @@ var app = {
 				if( url.indexOf("usd21.org/m") <= -1 ) {
 					var target = "_system";
 				} else {
-					var target = "_blank";
+					var target = "_system";
 				}
 				return cordova.InAppBrowser.open(url, target, 'location=yes,toolbar=yes,presentationstyle=pagesheet,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
 
