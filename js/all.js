@@ -45,30 +45,17 @@ var app = {
 			});			
 		}
 		
-		$("a[rel='external']").on("click", function(evt){
+		$("a[rel=external]").on("click", function(evt){
 			var url = evt.currentTarget.href;
-
-			/*
-			var first4Characters = url.substr(0,4);
-			var isNotAudio = true;
-			if( (url.indexOf(".mp3")<=-1) || (url.indexOf(".ogg")<=-1) || (url.indexOf(".m4a")<=-1) ){
-				isNotAudio = false;
+			evt.preventDefault();
+			if (! navigator.onLine) {
+				return alert("You must be connected to the internet in order to access this link.");
 			}
-			if((first4Characters == "http") && (isNotAudio)){
-			*/
-				evt.preventDefault();
-				if (! navigator.onLine) {
-					return alert("You must be connected to the internet in order to access this link.");
-				}
-				if( url.indexOf("usd21.org/m") <= -1 ) {
-					return cordova.InAppBrowser.open(url, "_system");
-				} else {
-					return cordova.InAppBrowser.open(url, "_blank", 'location=yes,toolbar=yes,presentationstyle=pagesheet,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
-				}
-
-			/*
+			if( url.indexOf("usd21.org/m") <= -1 ) {
+				cordova.InAppBrowser.open(url, "_system");
+			} else {
+				cordova.InAppBrowser.open(url, "_blank", 'location=yes,toolbar=yes,presentationstyle=pagesheet,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
 			}
-			*/
 		});
 
 		var db = new PouchDB('firstPrinciples.db', {
