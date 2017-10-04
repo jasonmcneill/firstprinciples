@@ -50,7 +50,7 @@ var app = {
 			if (! navigator.onLine) {
 				return alert("You must be connected to the internet in order to access this link.");
 			}
-			if( url.indexOf("usd21.org/m") <= -1 ) {
+			if( evt.currentTarget.href.indexOf("usd21.org/m") <= -1 ) {
 				cordova.InAppBrowser.open(evt.currentTarget.href, '_system', 'location=yes');
 			} else {
 				cordova.InAppBrowser.open(evt.currentTarget.href, '_self', 'location=yes,toolbar=yes');
