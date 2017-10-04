@@ -8,9 +8,9 @@
         Kip McKean
     </author>
     <content src="index.html" />
+    <allow-navigation href="*" />
+    <allow-navigation href="*" />
     <access origin="*" />
-    <allow-navigation href="http://*usd21.org/m/*" />
-    <allow-navigation href="https://*usd21.org/m/*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
