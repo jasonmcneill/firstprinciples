@@ -46,15 +46,14 @@ var app = {
 		}
 		
 		$("a[rel=external]").on("click", function(evt){
-			var url = evt.currentTarget.href;
 			evt.preventDefault();
 			if (! navigator.onLine) {
 				return alert("You must be connected to the internet in order to access this link.");
 			}
 			if( url.indexOf("usd21.org/m") <= -1 ) {
-				cordova.InAppBrowser.open(url, "_system");
+				window.open(evt.currentTarget.href, '_system');
 			} else {
-				cordova.InAppBrowser.open(url, "_blank", 'location=yes,toolbar=yes,presentationstyle=pagesheet,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
+				window.open(evt.currentTarget.href, '_blank', 'location=yes,toolbar=yes');
 			}
 		});
 
