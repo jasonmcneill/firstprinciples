@@ -65,7 +65,7 @@ var app = {
 				} else {
 					var target = "_blank";
 				}
-				return cordova.InAppBrowser.open(url, target, 'location=yes,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
+				return cordova.InAppBrowser.open(url, target, 'location=yes,toolbar=yes,presentationstyle=pagesheet,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
 
 			/*
 			}
