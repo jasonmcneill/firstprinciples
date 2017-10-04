@@ -61,11 +61,10 @@ var app = {
 					return alert("You must be connected to the internet in order to access this link.");
 				}
 				if( url.indexOf("usd21.org/m") <= -1 ) {
-					var target = "_system";
+					return cordova.InAppBrowser.open(url, "_system");
 				} else {
-					var target = "_system";
+					return cordova.InAppBrowser.open(url, "_blank", 'location=yes,toolbar=yes,presentationstyle=pagesheet,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
 				}
-				return cordova.InAppBrowser.open(url, target, 'location=yes,toolbar=yes,presentationstyle=pagesheet,hardwareback=yes,shouldPauseOnSuspend=yes,allowInlineMediaPlayback=yes');
 
 			/*
 			}
