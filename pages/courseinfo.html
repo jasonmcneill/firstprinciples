@@ -16,19 +16,16 @@
 	<link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
 	<link rel="apple-touch-icon" href="../images/apple-touch-icon-precomposed.png" />
 	<link rel="shortcut icon" href="../images/favicon.ico" />
-	<script type="text/javascript">
+	<style type="text/css">
 	<!--
-	
-	function onDeviceReady() {
-		$("a[rel=external]").on("click", function(evt){
-			evt.preventDefault();
-			cordova.InAppBrowser.open(evt.target.href, '_system', 'location=yes,toolbar=yes');
-		});
-	}
-	document.addEventListener("deviceready", onDeviceReady, false);
 
-	//-->
-	</script>
+	ul.doublespaced li {
+		margin-bottom: 10px;
+	}
+
+	-->
+	</style>
+
 </head>
 <body>
 
@@ -53,10 +50,10 @@
 				Each student is required to memorize the names of all the books of the Bible.
 			</li>
 			<li>
-				<strong><a href="http://eepurl.com/iyjz2" rel="external">Sign up</a></strong> for the Good News E-mails at <a href="http://www.caicc.net/" rel="external">CAICC.net</a> by Session 2.
+				<strong><a href="http://eepurl.com/iyjz2" rel="external" onclick="cordova.InAppBrowser.open(this.href, '_system', 'location=yes,toolbar=yes'); return false">Sign up</a></strong> for the Good News E-mails at <a href="http://www.caicc.net/" rel="external" onclick="cordova.InAppBrowser.open(this.href, '_system', 'location=yes,toolbar=yes'); return false">CAICC.net</a> by Session 2.
 			</li>
 			<li>
-				Read Ron Harding’s History of the Spread of Christianity in Modern Times (<a href="http://www.kipmckean.com/" rel="external">KipMcKean.com</a>) by Session 8.
+				Read Ron Harding’s History of the Spread of Christianity in Modern Times (<a href="http://www.kipmckean.com/" rel="external" onclick="cordova.InAppBrowser.open(this.href, '_system', 'location=yes,toolbar=yes'); return false">KipMcKean.com</a>) by Session 8.
 			</li>
 			<li>
 				An outline of the book of Acts will be turned in by Session 11. Each student is required to memorize two points from each chapter in the book of Acts.
@@ -118,63 +115,65 @@
 
 		<ul data-role="listview" data-split-icon="audio" data-split-theme="d" data-inset="true">
 			<li data-corners="false">
-				<a href="https://www.amazon.com/Love-Languages-Secret-that-Lasts/dp/080241270X/ref=sr_1_1?ie=UTF8&qid=1477171378&sr=8-1&keywords=five+love+languages" rel="external">
+				<a href="https://www.amazon.com/Love-Languages-Secret-that-Lasts/dp/080241270X/ref=sr_1_1?ie=UTF8&qid=1477171378&sr=8-1&keywords=five+love+languages" rel="external" onclick="cordova.InAppBrowser.open(this.href, '_system', 'location=yes,toolbar=yes'); return false">
 					<strong>The Five Love Languages</strong> &mdash; Chapman
 				</a>
 			</li>
 			<li data-corners="false" data-iconpos="right" data-theme="c">
-				<a href="https://www.amazon.com/Master-Plan-Evangelism-Study-Guide/dp/0739466135/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1477182249&sr=8-1" rel="external">
+				<a href="https://www.amazon.com/Master-Plan-Evangelism-Study-Guide/dp/0739466135/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1477182249&sr=8-1" rel="external" onclick="cordova.InAppBrowser.open(this.href, '_system', 'location=yes,toolbar=yes'); return false">
 					<strong>The Master Plan of Evangelism</strong> &mdash; Coleman
 				</a>
-				<a href="http://www.audible.com/pd/Religion-Spirituality/Master-Plan-of-Evangelism-Audiobook/B002VA970G/ref=a_search_c4_1_1_srTtl?qid=1477171591&sr=1-1" rel="external">
+				<a href="http://www.audible.com/pd/Religion-Spirituality/Master-Plan-of-Evangelism-Audiobook/B002VA970G/ref=a_search_c4_1_1_srTtl?qid=1477171591&sr=1-1" rel="external" data-icon="audio" onclick="cordova.InAppBrowser.open(this.href, '_system', 'location=yes,toolbar=yes'); return false">
 					Audio
 				</a>
 			</li>
 			<li data-corners="false" data-iconpos="right" data-theme="c">
-				<a href="https://www.amazon.com/Tale-three-Kings-Study-Brokenness/dp/0842369082/ref=sr_1_1?ie=UTF8&qid=1477171895&sr=8-1&keywords=Tale+of+three+kings" rel="external">
+				<a href="https://www.amazon.com/Tale-three-Kings-Study-Brokenness/dp/0842369082/ref=sr_1_1?ie=UTF8&qid=1477171895&sr=8-1&keywords=Tale+of+three+kings" rel="external" onclick="cordova.InAppBrowser.open(this.href, '_system', 'location=yes,toolbar=yes'); return false">
 					<strong>The Tale of Three Kings</strong> &mdash; Edwards
 				</a>
-				<a href="https://www.amazon.com/A-Tale-of-Three-Kings/dp/B004ZGYA9C/ref=tmm_aud_swatch_0?_encoding=UTF8&qid=1477171895&sr=8-1" rel="external">
+				<a href="https://www.amazon.com/A-Tale-of-Three-Kings/dp/B004ZGYA9C/ref=tmm_aud_swatch_0?_encoding=UTF8&qid=1477171895&sr=8-1" rel="external" data-icon="audio" onclick="cordova.InAppBrowser.open(this.href, '_system', 'location=yes,toolbar=yes'); return false">
 					Audio
 				</a>
 			</li>
 			<li data-corners="false" data-iconpos="right" data-theme="c">
-				<a href="https://www.amazon.com/Voice-Wind-Mark-Lion/dp/1414375492/ref=sr_1_1?ie=UTF8&qid=1477182327&sr=8-1&keywords=a+voice+in+the+wind" rel="external">
+				<a href="https://www.amazon.com/Voice-Wind-Mark-Lion/dp/1414375492/ref=sr_1_1?ie=UTF8&qid=1477182327&sr=8-1&keywords=a+voice+in+the+wind" rel="external" onclick="cordova.InAppBrowser.open(this.href, '_system', 'location=yes,toolbar=yes'); return false">
 					<strong>Voice in the Wind</strong> &mdash; Rivers
 				</a>
-				<a href="http://www.audible.com/pd/Romance/A-Voice-in-the-Wind-Audiobook/B002V5GPHE/ref=a_search_c4_1_1_srTtl?qid=1477171802&sr=1-1" rel="external">
+				<a href="http://www.audible.com/pd/Romance/A-Voice-in-the-Wind-Audiobook/B002V5GPHE/ref=a_search_c4_1_1_srTtl?qid=1477171802&sr=1-1" rel="external" data-icon="audio" onclick="cordova.InAppBrowser.open(this.href, '_system', 'location=yes,toolbar=yes'); return false">
 					Audio
 				</a>
 			</li>
 			<li data-corners="false">
-				<a href="https://www.amazon.com/Disciplined-Life-Mark-Christian-Maturity/dp/0764225979/ref=sr_1_1?ie=UTF8&qid=1477172340&sr=8-1&keywords=Disciplined+life" rel="external">
+				<a href="https://www.amazon.com/Disciplined-Life-Mark-Christian-Maturity/dp/0764225979/ref=sr_1_1?ie=UTF8&qid=1477172340&sr=8-1&keywords=Disciplined+life" rel="external" onclick="cordova.InAppBrowser.open(this.href, '_system', 'location=yes,toolbar=yes'); return false">
 					<strong>The Disciplined Life</strong> &mdash; Taylor
 				</a>
 			</li>
 			<li data-corners="false">
-				<a href="http://www.ebay.com/itm/Elevate-Jesus-Global-Revolution-for-Women-by-Elena-McKean-/152198987295?hash=item236fc43e1f:g:eYIAAOSw6n5XqSHY" rel="external">
+				<a href="http://www.ebay.com/itm/Elevate-Jesus-Global-Revolution-for-Women-by-Elena-McKean-/152198987295?hash=item236fc43e1f:g:eYIAAOSw6n5XqSHY" rel="external" onclick="cordova.InAppBrowser.open(this.href, '_system', 'location=yes,toolbar=yes'); return false">
 					<strong>Elevate</strong> &mdash; McKean
 				</a>
 			</li>
 		</ul>
+		
+		<br>
 
 		<h3>Overview of the <a href="bookofacts.html">Book of Acts</a>:</h3>
 
-		<ul>
+		<ul class="doublespaced">
 			<li>
-				Sermon #1: Acts 1-8<br>
+				<strong>Sermon #1: Acts 1-8</strong><br>
 				<em>Building a Great Church</em>
 			</li>
 			<li>
-				Sermon #2: Acts 9-15<br>
+				<strong>Sermon #2: Acts 9-15</strong><br>
 				<em>Forcefully Advancing the Kingdom</em>
 			</li>
 			<li>
-				Sermon #3: Acts 16-21<br>
+				<strong>Sermon #3: Acts 16-21</strong><br>
 				<em>Turning the World Upsidedown</em>
 			</li>
 			<li>
-				Sermon #4: Acts 21-28<br>
+				<strong>Sermon #4: Acts 21-28</strong><br>
 				<em>Evangelizing the World in a Generation</em>
 			</li>
 		</ul>
