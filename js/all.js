@@ -25,6 +25,7 @@ var app = {
 
 	onDeviceReady: function() {
 
+		var ref = "";   // Handle for inAppBrowser
 		var turnOffAudio = function(){
 			var audioElements = document.getElementsByTagName('audio');
 			if(audioElements.length >= 1){
@@ -50,11 +51,11 @@ var app = {
 			if (! navigator.onLine) {
 				return alert("You must be connected to the internet in order to access this link.");
 			}
-			if( evt.currentTarget.href.indexOf("usd21.org/m") <= -1 ) {
-				cordova.InAppBrowser.open(evt.currentTarget.href, '_system', 'location=yes');
-			} else {
-				cordova.InAppBrowser.open(evt.currentTarget.href, '_self', 'location=yes,toolbar=yes');
-			}
+			var url = evt.currentTarget.href;
+			var target = '_system';
+			ref = cordova.InAppBrowser.open(url, target);
+			console.log("Opening system browser");
+			console.log(ref);
 		});
 
 		var db = new PouchDB('firstPrinciples.db', {
