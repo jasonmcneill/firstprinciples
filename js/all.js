@@ -25,6 +25,7 @@ var app = {
 
 	onDeviceReady: function() {
 
+		window.open = cordova.InAppBrowser.open;
 		var ref = "";   // Handle for inAppBrowser
 		var turnOffAudio = function(){
 			var audioElements = document.getElementsByTagName('audio');
