@@ -34,8 +34,9 @@ var app = {
 				}			
 			}	
 		};
-		$("div[data-role='page']").on( "pageshow", function( event, ui ) {
+		$("div[data-role='page']").on( "pageshow, pageinit, pagecreate", function( event, ui ) {
 			turnOffAudio();
+			document.addEventListener("deviceready", app.onDeviceReady, false);
 		});
 
 		$.mobile.defaultPageTransition = 'none';
