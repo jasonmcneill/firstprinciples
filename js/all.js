@@ -25,7 +25,6 @@ var app = {
 
 	onDeviceReady: function() {
 
-		window.open = cordova.InAppBrowser.open;
 		var ref = "";   // Handle for inAppBrowser
 		var turnOffAudio = function(){
 			var audioElements = document.getElementsByTagName('audio');
@@ -54,10 +53,12 @@ var app = {
 				return alert("You must be connected to the internet in order to access this link.");
 			}
 			var url = evt.currentTarget.href;
-			var target = '_system';
-			ref = cordova.InAppBrowser.open(url, target);
-			console.log("Opening system browser");
-			console.log(ref);
+			if(typeof cordova !== "undefined") {
+				var target = '_system';
+				ref = cordova.InAppBrowser.open(url, target);
+			} else {
+				location.href = url;
+			}
 		});
 
 		var db = new PouchDB('firstPrinciples.db', {
