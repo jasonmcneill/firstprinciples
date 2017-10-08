@@ -24,7 +24,6 @@
     <preference name="FadeSplashScreenDuration" value="0"/>
     <preference name="ShowSplashScreenSpinner" value="false"/>
     <icon src="icon.png" />
-    <splash src="res/screen/ios/Default@2x~universal~anyany.png" />
 
     <platform name="browser">
         <preference name="SplashScreenDelay" value="0" />
