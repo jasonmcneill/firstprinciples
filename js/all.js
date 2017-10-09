@@ -17,6 +17,12 @@
  * under the License.
  */
 
+$(document).ready(function($){
+	$(document).on("pageshow", function(evt){
+		console.log("Fired event:  pageinit");
+	});
+});
+
 var app = {
 
 	initialize: function() {
@@ -53,12 +59,7 @@ var app = {
 				return alert("You must be connected to the internet in order to access this link.");
 			}
 			var url = evt.currentTarget.href;
-			if(typeof cordova !== "undefined") {
-				var target = '_system';
-				ref = cordova.InAppBrowser.open(url, target);
-			} else {
-				location.href = url;
-			}
+			ref = cordova.InAppBrowser.open(url, '_system');
 		});
 
 		var db = new PouchDB('firstPrinciples.db', {
