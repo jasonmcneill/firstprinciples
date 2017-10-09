@@ -9,10 +9,14 @@
     </author>
     <content src="index.html" />
     <allow-navigation href="*" />
-    <allow-navigation href="*" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <allow-intent href="*://*.usd21.org/*" />
+    <allow-intent href="*://*.caicc.net/*" />
+    <allow-intent href="*://*.kipmckean.com/*" />
+    <allow-intent href="*://*.amazon.com/*" />
+    <allow-intent href="*://discipleshipmedia.com/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
@@ -81,8 +85,8 @@
     <engine name="android" spec="^6.2.3" />
     <engine name="ios" spec="^4.4.0" />
     <engine name="browser" spec="^4.1.0" />
-    <plugin spec="https://github.com/apache/cordova-plugin-splashscreen.git" />
-    <plugin name="cordova-plugin-inappbrowser" spec="^1.7.1" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
-    <plugin spec="https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay" />
+    <plugin spec="https://github.com/apache/cordova-plugin-splashscreen.git#50a5588" />
+    <plugin spec="https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay#d9b46c8" />
+    <plugin name="cordova-plugin-inappbrowser" spec="1.7.1" />
+    <plugin name="cordova-plugin-whitelist" spec="1.3.2" />
 </widget>

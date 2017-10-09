@@ -43,6 +43,13 @@ var app = {
 		$("div[data-role='page']").on( "pageshow, pageinit, pagecreate", function( event, ui ) {
 			turnOffAudio();
 			document.addEventListener("deviceready", app.onDeviceReady, false);
+
+			$("a[rel=external]").on("click, vclick", function(evt){
+				evt.preventDefault();
+				var url = evt.currentTarget.href;
+				ref = cordova.InAppBrowser.open(url, '_system');
+			});
+
 		});
 
 		$.mobile.defaultPageTransition = 'none';
@@ -53,11 +60,8 @@ var app = {
 			});			
 		}
 		
-		$("a[rel=external]").on("click", function(evt){
+		$("a[rel=external]").on("click, vclick", function(evt){
 			evt.preventDefault();
-			if (! navigator.onLine) {
-				return alert("You must be connected to the internet in order to access this link.");
-			}
 			var url = evt.currentTarget.href;
 			ref = cordova.InAppBrowser.open(url, '_system');
 		});
@@ -68,6 +72,7 @@ var app = {
 		});
 		var dbInfo = db.info();
 
+		/*
 		var callRemote = function(event, db, jsonpurl){
 			if(event) var event = JSON.stringify(event) || {};
 			if(db) var db = JSON.stringify(db) || {};
@@ -90,6 +95,7 @@ var app = {
 			}
 		};
 		callRemote();
+		*/
 
 	}
 
