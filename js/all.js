@@ -18,8 +18,11 @@
  */
 
 $(document).ready(function($){
-	$(document).on("pageshow", function(evt){
+	$(document).on("pageshow", function(evt) {
 		console.log("Fired event:  pageinit");
+	});
+	$(document).on("mobileinit", function() {
+		$.mobile.defaultPageTransition = "none";
 	});
 });
 
